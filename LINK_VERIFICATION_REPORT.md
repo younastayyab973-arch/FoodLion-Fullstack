@@ -1,0 +1,773 @@
+## Backend Routes (extracted from Django)
+- \Z
+- about\.html\Z
+- admin/(?P<url>.*)
+- admin/^(?P<app_label>auth)
+- admin/^\Z
+- admin/^auth/group/^(?P<object_id>.+)/\Z
+- admin/^auth/group/^(?P<object_id>.+)/change/\Z
+- admin/^auth/group/^(?P<object_id>.+)/delete/\Z
+- admin/^auth/group/^(?P<object_id>.+)/history/\Z
+- admin/^auth/group/^\Z
+- admin/^auth/group/^add/\Z
+- admin/^autocomplete/\Z
+- admin/^jsi18n/\Z
+- admin/^login/\Z
+- admin/^logout/\Z
+- admin/^password_change/\Z
+- admin/^password_change/done/\Z
+- admin/^r/(?P<content_type_id>[0-9]+)/(?P<object_id>.+)/\Z
+- admin\-dashboard/\Z
+- admin\-dashboard\.html\Z
+- admin\-login/\Z
+- admin\-login\.html\Z
+- admin\-panel/^\Z
+- api/admin/^dashboard/\Z
+- api/admin/^orders/(?P<pk>[0-9]+)/\Z
+- api/admin/^orders/\Z
+- api/admin/^restaurants/(?P<pk>[0-9]+)/\Z
+- api/admin/^restaurants/\Z
+- api/admin/^users/\Z
+- api/auth/^login/\Z
+- api/auth/^logout/\Z
+- api/auth/^profile/\Z
+- api/auth/^refresh/\Z
+- api/auth/^signup/\Z
+- api/menu\-items/^(?P<pk>[0-9]+)/\Z
+- api/menu\-items/^\Z
+- api/orders/^(?P<pk>[0-9]+)/\Z
+- api/orders/^\Z
+- api/restaurants/^(?P<pk>[0-9]+)/\Z
+- api/restaurants/^\Z
+- api/restaurants/^categories/\Z
+- cart\-management/\Z
+- cart\-management\.html\Z
+- contacts\.html\Z
+- customer\-panel/\Z
+- customer\-panel\.html\Z
+- dashboard/\Z
+- dashboard\-portal/\Z
+- dashboard\-portal\.html\Z
+- home\.html\Z
+- images/(?P<path>.*)
+- login\.html\Z
+- menu\-management/\Z
+- menu\-management\.html\Z
+- order\-management/\Z
+- order\-management\.html\Z
+- restaurant\-panel/\Z
+- restaurant\-panel\.html\Z
+- restaurants\.html\Z
+- rider\-panel/\Z
+- rider\-panel\.html\Z
+- services\.html\Z
+- signup\.html\Z
+- static/(?P<path>.*)
+
+## Frontend HTML Files Scanned
+- about.html
+- cart.html
+- contacts.html
+- home.html
+- index.html
+- login.html
+- menu-biryani.html
+- menu-cakes.html
+- menu-dominos.html
+- menu-kfc.html
+- order.html
+- privacy.html
+- restaurants.html
+- services.html
+- signup.html
+- terms.html
+- admin.html
+- admin-login.html
+- admin-dashboard.html
+- customer-panel.html
+- rider-panel.html
+- restaurant-panel.html
+- menu-management.html
+- order-management.html
+- cart-management.html
+- dashboard-portal.html
+- images\Smart Retailer - Replit.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\admin.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\api.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\base.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\login.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\login_base.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\raw_data_form.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\admin\detail.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\admin\dict_value.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\admin\list.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\admin\list_value.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\admin\simple_list_value.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\filters\base.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\filters\ordering.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\filters\search.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\checkbox.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\checkbox_multiple.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\dict_field.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\fieldset.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\form.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\input.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\list_field.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\list_fieldset.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\radio.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\select.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\select_multiple.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\textarea.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\checkbox.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\checkbox_multiple.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\dict_field.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\fieldset.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\form.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\input.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\list_field.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\list_fieldset.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\radio.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\select.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\select_multiple.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\textarea.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\pagination\numbers.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\pagination\previous_and_next.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\checkbox.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\checkbox_multiple.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\dict_field.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\fieldset.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\form.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\input.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\list_field.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\list_fieldset.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\radio.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\select.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\select_multiple.html
+- .venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\textarea.html
+- .venv\Lib\site-packages\django\views\templates\csrf_403.html
+- .venv\Lib\site-packages\django\views\templates\default_urlconf.html
+- .venv\Lib\site-packages\django\views\templates\directory_index.html
+- .venv\Lib\site-packages\django\views\templates\technical_404.html
+- .venv\Lib\site-packages\django\views\templates\technical_500.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\attrs.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\div.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\field.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\label.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\p.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\table.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\ul.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\formsets\div.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\formsets\p.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\formsets\table.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\formsets\ul.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\attrs.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\checkbox.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\checkbox_option.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\checkbox_select.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\clearable_file_input.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\color.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\date.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\datetime.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\email.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\file.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\hidden.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\input.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\input_option.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\multiple_hidden.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\multiple_input.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\multiwidget.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\number.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\password.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\radio.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\radio_option.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\search.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\select.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\select_date.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\select_option.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\splitdatetime.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\splithiddendatetime.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\tel.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\text.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\textarea.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\time.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\widgets\url.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\errors\dict\default.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\errors\dict\ul.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\errors\list\default.html
+- .venv\Lib\site-packages\django\forms\templates\django\forms\errors\list\ul.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\attrs.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\div.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\field.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\label.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\p.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\table.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\ul.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\formsets\div.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\formsets\p.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\formsets\table.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\formsets\ul.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\attrs.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\checkbox.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\checkbox_option.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\checkbox_select.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\clearable_file_input.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\color.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\date.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\datetime.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\email.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\file.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\hidden.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\input.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\input_option.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\multiple_hidden.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\multiple_input.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\multiwidget.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\number.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\password.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\radio.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\radio_option.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\search.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\select.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\select_date.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\select_option.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\splitdatetime.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\splithiddendatetime.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\tel.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\text.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\textarea.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\time.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\url.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\errors\dict\default.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\errors\dict\ul.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\errors\list\default.html
+- .venv\Lib\site-packages\django\forms\jinja2\django\forms\errors\list\ul.html
+- .venv\Lib\site-packages\django\contrib\postgres\templates\postgres\widgets\split_array.html
+- .venv\Lib\site-packages\django\contrib\postgres\jinja2\postgres\widgets\split_array.html
+- .venv\Lib\site-packages\django\contrib\gis\templates\gis\openlayers.html
+- .venv\Lib\site-packages\django\contrib\auth\templates\auth\widgets\read_only_password_hash.html
+- .venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\bookmarklets.html
+- .venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\index.html
+- .venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\missing_docutils.html
+- .venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\model_detail.html
+- .venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\model_index.html
+- .venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\template_detail.html
+- .venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\template_filter_index.html
+- .venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\template_tag_index.html
+- .venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\view_detail.html
+- .venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\view_index.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\404.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\500.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\actions.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\app_index.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\app_list.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\base.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\base_site.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\change_form.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\change_form_object_tools.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\change_list.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\change_list_object_tools.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\change_list_results.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\color_theme_toggle.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\date_hierarchy.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\delete_confirmation.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\delete_selected_confirmation.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\filter.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\index.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\invalid_setup.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\login.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\nav_sidebar.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\object_history.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\pagination.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\popup_response.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\prepopulated_fields_js.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\search_form.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\submit_line.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\registration\logged_out.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\registration\password_change_done.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\registration\password_change_form.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\registration\password_reset_complete.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\registration\password_reset_confirm.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\registration\password_reset_done.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\registration\password_reset_email.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\registration\password_reset_form.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\edit_inline\stacked.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\edit_inline\tabular.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\includes\fieldset.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\includes\object_delete_summary.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\widgets\clearable_file_input.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\widgets\date.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\widgets\foreign_key_raw_id.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\widgets\many_to_many_raw_id.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\widgets\radio.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\widgets\related_widget_wrapper.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\widgets\split_datetime.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\widgets\time.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\widgets\url.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\auth\user\add_form.html
+- .venv\Lib\site-packages\django\contrib\admin\templates\admin\auth\user\change_password.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\admin.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\api.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\base.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\login.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\login_base.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\raw_data_form.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\admin\detail.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\admin\dict_value.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\admin\list.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\admin\list_value.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\admin\simple_list_value.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\filters\base.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\filters\ordering.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\filters\search.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\checkbox.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\checkbox_multiple.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\dict_field.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\fieldset.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\form.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\input.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\list_field.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\list_fieldset.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\radio.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\select.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\select_multiple.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\horizontal\textarea.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\checkbox.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\checkbox_multiple.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\dict_field.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\fieldset.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\form.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\input.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\list_field.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\list_fieldset.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\radio.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\select.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\select_multiple.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\inline\textarea.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\pagination\numbers.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\pagination\previous_and_next.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\checkbox.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\checkbox_multiple.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\dict_field.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\fieldset.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\form.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\input.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\list_field.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\list_fieldset.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\radio.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\select.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\select_multiple.html
+- backend\venv\Lib\site-packages\rest_framework\templates\rest_framework\vertical\textarea.html
+- backend\venv\Lib\site-packages\django\views\templates\csrf_403.html
+- backend\venv\Lib\site-packages\django\views\templates\default_urlconf.html
+- backend\venv\Lib\site-packages\django\views\templates\directory_index.html
+- backend\venv\Lib\site-packages\django\views\templates\technical_404.html
+- backend\venv\Lib\site-packages\django\views\templates\technical_500.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\attrs.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\div.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\field.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\label.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\p.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\table.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\ul.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\formsets\div.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\formsets\p.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\formsets\table.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\formsets\ul.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\attrs.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\checkbox.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\checkbox_option.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\checkbox_select.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\clearable_file_input.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\color.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\date.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\datetime.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\email.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\file.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\hidden.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\input.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\input_option.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\multiple_hidden.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\multiple_input.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\multiwidget.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\number.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\password.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\radio.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\radio_option.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\search.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\select.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\select_date.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\select_option.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\splitdatetime.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\splithiddendatetime.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\tel.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\text.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\textarea.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\time.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\widgets\url.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\errors\dict\default.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\errors\dict\ul.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\errors\list\default.html
+- backend\venv\Lib\site-packages\django\forms\templates\django\forms\errors\list\ul.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\attrs.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\div.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\field.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\label.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\p.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\table.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\ul.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\formsets\div.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\formsets\p.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\formsets\table.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\formsets\ul.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\attrs.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\checkbox.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\checkbox_option.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\checkbox_select.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\clearable_file_input.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\color.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\date.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\datetime.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\email.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\file.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\hidden.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\input.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\input_option.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\multiple_hidden.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\multiple_input.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\multiwidget.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\number.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\password.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\radio.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\radio_option.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\search.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\select.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\select_date.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\select_option.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\splitdatetime.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\splithiddendatetime.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\tel.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\text.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\textarea.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\time.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\widgets\url.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\errors\dict\default.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\errors\dict\ul.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\errors\list\default.html
+- backend\venv\Lib\site-packages\django\forms\jinja2\django\forms\errors\list\ul.html
+- backend\venv\Lib\site-packages\django\contrib\postgres\templates\postgres\widgets\split_array.html
+- backend\venv\Lib\site-packages\django\contrib\postgres\jinja2\postgres\widgets\split_array.html
+- backend\venv\Lib\site-packages\django\contrib\gis\templates\gis\openlayers.html
+- backend\venv\Lib\site-packages\django\contrib\auth\templates\auth\widgets\read_only_password_hash.html
+- backend\venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\bookmarklets.html
+- backend\venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\index.html
+- backend\venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\missing_docutils.html
+- backend\venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\model_detail.html
+- backend\venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\model_index.html
+- backend\venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\template_detail.html
+- backend\venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\template_filter_index.html
+- backend\venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\template_tag_index.html
+- backend\venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\view_detail.html
+- backend\venv\Lib\site-packages\django\contrib\admindocs\templates\admin_doc\view_index.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\404.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\500.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\actions.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\app_index.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\app_list.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\base.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\base_site.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\change_form.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\change_form_object_tools.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\change_list.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\change_list_object_tools.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\change_list_results.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\color_theme_toggle.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\date_hierarchy.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\delete_confirmation.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\delete_selected_confirmation.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\filter.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\index.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\invalid_setup.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\login.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\nav_sidebar.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\object_history.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\pagination.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\popup_response.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\prepopulated_fields_js.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\search_form.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\submit_line.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\registration\logged_out.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\registration\password_change_done.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\registration\password_change_form.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\registration\password_reset_complete.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\registration\password_reset_confirm.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\registration\password_reset_done.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\registration\password_reset_email.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\registration\password_reset_form.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\edit_inline\stacked.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\edit_inline\tabular.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\includes\fieldset.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\includes\object_delete_summary.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\widgets\clearable_file_input.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\widgets\date.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\widgets\foreign_key_raw_id.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\widgets\many_to_many_raw_id.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\widgets\radio.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\widgets\related_widget_wrapper.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\widgets\split_datetime.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\widgets\time.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\widgets\url.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\auth\user\add_form.html
+- backend\venv\Lib\site-packages\django\contrib\admin\templates\admin\auth\user\change_password.html
+- images\Smart Retailer - Replit_files\anchor.html
+- images\Smart Retailer - Replit_files\controller-with-preconnect-e8bc6568a70aa9ab66c682ca376bc579.html
+- images\Smart Retailer - Replit_files\inner.html
+- images\Smart Retailer - Replit_files\m-outer-3437aaddcdf6922d623e172c2d6f9278.html
+- images\Smart Retailer - Replit_files\saved_resource(1).html
+- images\Smart Retailer - Replit_files\saved_resource(2).html
+- images\Smart Retailer - Replit_files\saved_resource(3).html
+- images\Smart Retailer - Replit_files\saved_resource.html
+- images\Smart Retailer - Replit_files\workspace_iframe.html
+
+## URLs present in frontend but missing in backend
+- 
+- ..
+- ./Smart Retailer - Replit_files/0ec701c2e0eeb130.css
+- ./Smart Retailer - Replit_files/2d2e7801db42bf1c.css
+- ./Smart Retailer - Replit_files/32fbc46ce026ab38.css
+- ./Smart Retailer - Replit_files/50bbdd36633637d5.css
+- ./Smart Retailer - Replit_files/62d86755ffc6d952.css
+- ./Smart Retailer - Replit_files/70f8920e906c6a8d.css
+- ./Smart Retailer - Replit_files/7e26e462f7d7efaf.css
+- ./Smart Retailer - Replit_files/e7232b539ce26c02.css
+- ./css2
+- ./styles__ltr.css
+- CSS/style.css
+- README_ADMIN.md
+- SETUP_GUIDE.md
+- about.html
+- admin-dashboard.html
+- admin-login.html
+- admin.html
+- bookmarklets
+- cart-management.html
+- cart.html
+- contacts.html
+- customer-panel.html
+- filters
+- index.html
+- javascript:(function(){if(typeof XMLHttpRequest!='undefined'){x=new XMLHttpRequest()}else{return;}x.open('HEAD',location.href,false);x.send(null);try{view=x.getResponseHeader('x-view');}catch(e){alert('No view found for this page');return;}if(view=='undefined'){alert('No view found for this page');}document.location='{% url 'django-admindocs-views-index' %}'+view+'/';})()
+- login.html
+- menu-kfc.html
+- menu-management.html
+- models
+- order-management.html
+- order.html
+- pan-y
+- privacy.html
+- restaurant-panel.html
+- restaurants.html
+- rider-panel.html
+- services.html
+- signup.html
+- tags
+- terms.html
+- views
+- {% add_preserved_filters add_url is_popup to_field %}
+- {% add_preserved_filters changelist_url %}
+- {% add_preserved_filters delete_url %}
+- {% add_preserved_filters history_url %}
+- {% add_query_param request api_settings.URL_FORMAT_OVERRIDE format %}
+- {% add_query_param request param key %}
+- {% block stylesheet %}{% static 
+- {% block stylesheet_rtl %}{% static 
+- {% static 
+- {% static 'admin/css/unusable_password_field.css' %}
+- {% url 'admin:app_list' app_label=cl.opts.app_label %}
+- {% url 'admin:app_list' app_label=opts.app_label %}
+- {% url 'admin:index' %}
+- {% url 'admin:logout' %}
+- {% url 'admin:password_change' %}
+- {% url 'django-admindocs-docroot' %}
+- {% url 'django-admindocs-models-detail' app_label=model.app_label model_name=model.model_name %}
+- {% url 'django-admindocs-models-index' %}
+- {% url 'django-admindocs-views-detail' view=view.full_name %}
+- {% url 'django-admindocs-views-index' %}
+- {% url 'rest_framework:login' %}
+- {% url inline_admin_form.model_admin.opts|admin_urlname:'change' inline_admin_form.original.pk|admin_urlquote %}
+- {% url opts|admin_urlname:'change' object.pk|admin_urlquote %}
+- {% url opts|admin_urlname:'change' original.pk|admin_urlquote %}
+- {% url opts|admin_urlname:'changelist' %}
+- {{ absolute_url }}
+- {{ add_related_url }}
+- {{ app.app_url }}
+- {{ app_path }}
+- {{ back.link }}
+- {{ breadcrumb_url }}
+- {{ choice.link }}
+- {{ choice.query_string|iriencode }}
+- {{ cl.add_facet_link }}
+- {{ cl.clear_all_filters_qs }}
+- {{ cl.remove_facet_link }}
+- {{ docsroot }}
+- {{ entry.get_admin_url }}
+- {{ form_url }}
+- {{ f|urlencode }}
+- {{ header.url_primary }}
+- {{ header.url_remove }}
+- {{ header.url_toggle }}
+- {{ inline_admin_form.absolute_url }}
+- {{ link }}
+- {{ link_url }}
+- {{ login_url }}
+- {{ model.add_url }}
+- {{ model.admin_url }}
+- {{ next_url }}
+- {{ page_link.url }}
+- {{ password_reset_url }}
+- {{ password_url|default:
+- {{ previous_url }}
+- {{ related_url }}
+- {{ request.get_full_path }}
+- {{ row.url }}
+- {{ show_all_url }}
+- {{ site_url }}
+- {{ url }}
+- {{ widget.href }}
+- {{ widget.value.url }}
+
+## Backend routes not referenced by frontend
+- \Z
+- about\.html\Z
+- admin/(?P<url>.*)
+- admin/^(?P<app_label>auth)
+- admin/^\Z
+- admin/^auth/group/^(?P<object_id>.+)/\Z
+- admin/^auth/group/^(?P<object_id>.+)/change/\Z
+- admin/^auth/group/^(?P<object_id>.+)/delete/\Z
+- admin/^auth/group/^(?P<object_id>.+)/history/\Z
+- admin/^auth/group/^\Z
+- admin/^auth/group/^add/\Z
+- admin/^autocomplete/\Z
+- admin/^jsi18n/\Z
+- admin/^login/\Z
+- admin/^logout/\Z
+- admin/^password_change/\Z
+- admin/^password_change/done/\Z
+- admin/^r/(?P<content_type_id>[0-9]+)/(?P<object_id>.+)/\Z
+- admin\-dashboard/\Z
+- admin\-dashboard\.html\Z
+- admin\-login/\Z
+- admin\-login\.html\Z
+- admin\-panel/^\Z
+- api/admin/^dashboard/\Z
+- api/admin/^orders/(?P<pk>[0-9]+)/\Z
+- api/admin/^orders/\Z
+- api/admin/^restaurants/(?P<pk>[0-9]+)/\Z
+- api/admin/^restaurants/\Z
+- api/admin/^users/\Z
+- api/auth/^login/\Z
+- api/auth/^logout/\Z
+- api/auth/^profile/\Z
+- api/auth/^refresh/\Z
+- api/auth/^signup/\Z
+- api/menu\-items/^(?P<pk>[0-9]+)/\Z
+- api/menu\-items/^\Z
+- api/orders/^(?P<pk>[0-9]+)/\Z
+- api/orders/^\Z
+- api/restaurants/^(?P<pk>[0-9]+)/\Z
+- api/restaurants/^\Z
+- api/restaurants/^categories/\Z
+- cart\-management/\Z
+- cart\-management\.html\Z
+- contacts\.html\Z
+- customer\-panel/\Z
+- customer\-panel\.html\Z
+- dashboard/\Z
+- dashboard\-portal/\Z
+- dashboard\-portal\.html\Z
+- home\.html\Z
+- images/(?P<path>.*)
+- login\.html\Z
+- menu\-management/\Z
+- menu\-management\.html\Z
+- order\-management/\Z
+- order\-management\.html\Z
+- restaurant\-panel/\Z
+- restaurant\-panel\.html\Z
+- restaurants\.html\Z
+- rider\-panel/\Z
+- rider\-panel\.html\Z
+- services\.html\Z
+- signup\.html\Z
+- static/(?P<path>.*)
+
+## Backend Route GET Request Results
+- `/\Z` → 400
+- `/about\.html\Z` → 400
+- `/admin/(?P<url>.*)` → 400
+- `/admin/^(?P<app_label>auth)` → 400
+- `/admin/^\Z` → 400
+- `/admin/^auth/group/^(?P<object_id>.+)/\Z` → 400
+- `/admin/^auth/group/^(?P<object_id>.+)/change/\Z` → 400
+- `/admin/^auth/group/^(?P<object_id>.+)/delete/\Z` → 400
+- `/admin/^auth/group/^(?P<object_id>.+)/history/\Z` → 400
+- `/admin/^auth/group/^\Z` → 400
+- `/admin/^auth/group/^add/\Z` → 400
+- `/admin/^autocomplete/\Z` → 400
+- `/admin/^jsi18n/\Z` → 400
+- `/admin/^login/\Z` → 400
+- `/admin/^logout/\Z` → 400
+- `/admin/^password_change/\Z` → 400
+- `/admin/^password_change/done/\Z` → 400
+- `/admin/^r/(?P<content_type_id>[0-9]+)/(?P<object_id>.+)/\Z` → 400
+- `/admin\-dashboard/\Z` → 400
+- `/admin\-dashboard\.html\Z` → 400
+- `/admin\-login/\Z` → 400
+- `/admin\-login\.html\Z` → 400
+- `/admin\-panel/^\Z` → 400
+- `/api/admin/^dashboard/\Z` → 400
+- `/api/admin/^orders/(?P<pk>[0-9]+)/\Z` → 400
+- `/api/admin/^orders/\Z` → 400
+- `/api/admin/^restaurants/(?P<pk>[0-9]+)/\Z` → 400
+- `/api/admin/^restaurants/\Z` → 400
+- `/api/admin/^users/\Z` → 400
+- `/api/auth/^login/\Z` → 400
+- `/api/auth/^logout/\Z` → 400
+- `/api/auth/^profile/\Z` → 400
+- `/api/auth/^refresh/\Z` → 400
+- `/api/auth/^signup/\Z` → 400
+- `/api/menu\-items/^(?P<pk>[0-9]+)/\Z` → 400
+- `/api/menu\-items/^\Z` → 400
+- `/api/orders/^(?P<pk>[0-9]+)/\Z` → 400
+- `/api/orders/^\Z` → 400
+- `/api/restaurants/^(?P<pk>[0-9]+)/\Z` → 400
+- `/api/restaurants/^\Z` → 400
+- `/api/restaurants/^categories/\Z` → 400
+- `/cart\-management/\Z` → 400
+- `/cart\-management\.html\Z` → 400
+- `/contacts\.html\Z` → 400
+- `/customer\-panel/\Z` → 400
+- `/customer\-panel\.html\Z` → 400
+- `/dashboard/\Z` → 400
+- `/dashboard\-portal/\Z` → 400
+- `/dashboard\-portal\.html\Z` → 400
+- `/home\.html\Z` → 400
+- `/images/(?P<path>.*)` → 400
+- `/login\.html\Z` → 400
+- `/menu\-management/\Z` → 400
+- `/menu\-management\.html\Z` → 400
+- `/order\-management/\Z` → 400
+- `/order\-management\.html\Z` → 400
+- `/restaurant\-panel/\Z` → 400
+- `/restaurant\-panel\.html\Z` → 400
+- `/restaurants\.html\Z` → 400
+- `/rider\-panel/\Z` → 400
+- `/rider\-panel\.html\Z` → 400
+- `/services\.html\Z` → 400
+- `/signup\.html\Z` → 400
+- `/static/(?P<path>.*)` → 400
+
+## Admin Dashboard Checks
+- admin-dashboard.html file exists
+- Contains `/admin/` link
+- `/admin/` GET status: 400

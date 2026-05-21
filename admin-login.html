@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodLion Admin Login</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .login-container {
+            background: white;
+            padding: 50px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.2);
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .logo {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .logo h1 {
+            font-size: 40px;
+            color: #ff6b35;
+            margin-bottom: 10px;
+        }
+
+        .logo p {
+            color: #7f8c8d;
+            font-size: 14px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #2c3e50;
+            font-weight: 500;
+        }
+
+        input {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #bdc3c7;
+            border-radius: 5px;
+            font-size: 14px;
+            transition: border-color 0.3s;
+        }
+
+        input:focus {
+            outline: none;
+            border-color: #ff6b35;
+            box-shadow: 0 0 5px rgba(255, 107, 53, 0.2);
+        }
+
+        .login-btn {
+            width: 100%;
+            padding: 12px;
+            background: #ff6b35;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.3s;
+            margin-top: 10px;
+        }
+
+        .login-btn:hover {
+            background: #e55a24;
+        }
+
+        .login-btn:disabled {
+            background: #bdc3c7;
+            cursor: not-allowed;
+        }
+
+        .error {
+            background: #f8d7da;
+            color: #721c24;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .success {
+            background: #d4edda;
+            color: #155724;
+            padding: 12px;
+            border-radius: 5px;
+            margin-bottom: 20px;
+            display: none;
+        }
+
+        .demo-info {
+            background: #e7f3ff;
+            border: 1px solid #b3d9ff;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 30px;
+            font-size: 13px;
+            color: #004085;
+        }
+
+        .demo-info strong {
+            display: block;
+            margin-bottom: 8px;
+        }
+
+        .demo-info p {
+            margin: 5px 0;
+        }
+
+        .loading {
+            display: none;
+            text-align: center;
+            color: #7f8c8d;
+            margin-top: 15px;
+        }
+
+        .spinner {
+            border: 3px solid #f3f3f3;
+            border-top: 3px solid #ff6b35;
+            border-radius: 50%;
+            width: 20px;
+            height: 20px;
+            animation: spin 1s linear infinite;
+            margin: 10px auto;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="login-container">
+        <div class="logo">
+            <h1>🍔 FoodLion</h1>
+            <p>Admin Dashboard</p>
+        </div>
+
+        <div class="error" id="errorMsg"></div>
+        <div class="success" id="successMsg"></div>
+
+        <form id="loginForm" onsubmit="handleLogin(event)">
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input 
+                    type="email" 
+                    id="email" 
+                    placeholder="admin@foodlion.com"
+                    required
+                >
+            </div>
+
+            <div class="form-group">
+                <label for="password">Password</label>
+                <input 
+                    type="password" 
+                    id="password" 
+                    placeholder="Enter your password"
+                    required
+                >
+            </div>
+
+            <button type="submit" class="login-btn" id="loginBtn">Login</button>
+
+            <div class="loading" id="loading">
+                <div class="spinner"></div>
+                <p>Logging in...</p>
+            </div>
+        </form>
+
+        <div class="demo-info">
+            <strong>Demo Credentials:</strong>
+            <p><strong>Email:</strong> admin@foodlion.com</p>
+            <p><strong>Password:</strong> admin123</p>
+            <p style="margin-top: 10px; font-style: italic;">
+                Use these credentials to access the admin dashboard for testing.
+            </p>
+        </div>
+    </div>
+
+    <script>
+        // API configuration - dynamically detect backend
+        const API_CONFIG = {
+            getBaseUrl: function() {
+                const hostname = window.location.hostname;
+                const protocol = window.location.protocol;
+                
+                if (hostname === 'localhost' || hostname === '127.0.0.1') {
+                    return `${protocol}//${hostname}:8000`;
+                }
+                return `${protocol}//${hostname}`;
+            }
+        };
+
+        async function handleLogin(event) {
+            event.preventDefault();
+
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const errorMsg = document.getElementById('errorMsg');
+            const successMsg = document.getElementById('successMsg');
+            const loginBtn = document.getElementById('loginBtn');
+            const loading = document.getElementById('loading');
+
+            // Clear messages
+            errorMsg.style.display = 'none';
+            successMsg.style.display = 'none';
+
+            // Show loading
+            loginBtn.disabled = true;
+            loading.style.display = 'block';
+
+            try {
+                const API_BASE = `${API_CONFIG.getBaseUrl()}/api`;
+                const response = await fetch(`${API_BASE}/auth/login/`, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        email: email,
+                        password: password
+                    })
+                });
+
+                const data = await response.json();
+
+                if (response.ok && data.success) {
+                    // Save tokens
+                    localStorage.setItem('access_token', data.access_token);
+                    if (data.refresh_token) {
+                        localStorage.setItem('refresh_token', data.refresh_token);
+                    }
+                    if (data.user) {
+                        localStorage.setItem('user', JSON.stringify(data.user));
+                    }
+
+                    // Show success
+                    successMsg.textContent = 'Login successful! Redirecting...';
+                    successMsg.style.display = 'block';
+
+                    // Redirect after 1 second
+                    setTimeout(() => {
+                        window.location.href = '/admin-dashboard.html';
+                    }, 1000);
+                } else {
+                    // Show error
+                    errorMsg.textContent = data.message || 'Invalid credentials';
+                    errorMsg.style.display = 'block';
+                }
+            } catch (error) {
+                console.error('Login error:', error);
+                errorMsg.textContent = 'Connection error. Make sure the backend server is running on ' + API_CONFIG.getBaseUrl();
+                errorMsg.style.display = 'block';
+            } finally {
+                loginBtn.disabled = false;
+                loading.style.display = 'none';
+            }
+        }
+
+        // Auto-fill demo credentials for testing
+        document.addEventListener('DOMContentLoaded', function() {
+            document.getElementById('email').value = 'admin@foodlion.com';
+            document.getElementById('password').value = 'admin123';
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FoodLion Admin Dashboard</title>
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body>
+    <header>
+        <div class="nav-container">
+            <div class="logo-section">
+                <a href="index.html" class="logo">
+                    <img src="images/logo-final.png" alt="FoodLion Logo">
+                </a>
+            </div>
+            <div class="menu-toggle" onclick="toggleMenu()"><i class="fa-solid fa-bars"></i></div>
+            <nav>
+                <ul>
+                    <li><a href="admin.html" class="active">Dashboard</a></li>
+                    <li><a href="restaurants.html">Restaurants</a></li>
+                    <li><a href="cart.html">Orders</a></li>
+                    <li><a href="menu-kfc.html">Menu</a></li>
+                    <li><a href="contacts.html">Customers</a></li>
+                    <li><a href="login.html" class="btn"><i class="fa-solid fa-right-to-bracket"></i> Logout</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="admin-hero reveal">
+            <div class="content-wrapper admin-intro">
+                <div>
+                    <span style="display:inline-block; color: var(--primary-color); font-weight:700; letter-spacing:1px; text-transform:uppercase; margin-bottom:12px;">Admin Dashboard</span>
+                    <h1>Manage operations with one click.</h1>
+                    <p>Track orders, update menus, review customer activity, and monitor performance across FoodLion.</p>
+                    <div style="display:flex; flex-wrap:wrap; gap:12px; margin-top:20px;">
+                        <a class="btn" href="restaurants.html">View Live Menu</a>
+                        <a class="btn btn-white" href="cart.html">Live Orders</a>
+                    </div>
+                </div>
+                <div class="admin-hero-card card" style="padding: 30px;">
+                    <h3>Operations Snapshot</h3>
+                    <p>All systems are running smoothly. Use the quick task cards below to access management tools.</p>
+                    <div style="display:grid; grid-template-columns: repeat(2, minmax(120px, 1fr)); gap:12px; margin-top:20px;">
+                        <div class="status-pill">Active Orders<span>24</span></div>
+                        <div class="status-pill">New Users<span>8</span></div>
+                        <div class="status-pill">Menu Items<span>102</span></div>
+                        <div class="status-pill">Pending Reviews<span>5</span></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-section reveal">
+            <div class="content-wrapper">
+                <h2>Quick Operations</h2>
+                <div class="dashboard-actions grid-container">
+                    <article class="action-card card">
+                        <div>
+                            <h3><i class="fa-solid fa-bell" style="color: var(--primary-color);"></i> Order Management</h3>
+                            <p>Review new orders, assign deliveries, and track completion in real time.</p>
+                        </div>
+                        <a class="btn" href="cart.html">Open Orders</a>
+                    </article>
+                    <article class="action-card card">
+                        <div>
+                            <h3><i class="fa-solid fa-utensils" style="color: var(--primary-color);"></i> Menu Control</h3>
+                            <p>Edit menu listings, update prices, and add seasonal specials instantly.</p>
+                        </div>
+                        <a class="btn" href="restaurants.html">Manage Menu</a>
+                    </article>
+                    <article class="action-card card">
+                        <div>
+                            <h3><i class="fa-solid fa-users" style="color: var(--primary-color);"></i> Customer Insights</h3>
+                            <p>Monitor customer activity, feedback trends, and loyalty status.</p>
+                        </div>
+                        <a class="btn" href="contacts.html">View Customers</a>
+                    </article>
+                    <article class="action-card card">
+                        <div>
+                            <h3><i class="fa-solid fa-chart-line" style="color: var(--primary-color);"></i> Performance Reports</h3>
+                            <p>Generate revenue, order, and traffic reports for the current week.</p>
+                        </div>
+                        <a class="btn" href="about.html">Open Reports</a>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="dashboard-section reveal">
+            <div class="content-wrapper">
+                <h2>Recent Activity</h2>
+                <div class="grid-container">
+                    <div class="card" style="padding: 25px;">
+                        <h3>Latest Orders</h3>
+                        <ul class="activity-list">
+                            <li><strong>#A1298</strong> - Zinger Burger ordered <span>15m ago</span></li>
+                            <li><strong>#A1297</strong> - Fajita Pizza ordered <span>22m ago</span></li>
+                            <li><strong>#A1296</strong> - Special Biryani ordered <span>35m ago</span></li>
+                        </ul>
+                    </div>
+                    <div class="card" style="padding: 25px;">
+                        <h3>Pending Tasks</h3>
+                        <ul class="activity-list">
+                            <li>Approve new restaurant listing <span>4h</span></li>
+                            <li>Update midnight promo banner <span>1d</span></li>
+                            <li>Respond to customer review <span>2d</span></li>
+                        </ul>
+                    </div>
+                    <div class="card" style="padding: 25px;">
+                        <h3>System Summary</h3>
+                        <div class="summary-grid">
+                            <div><strong>Uptime</strong><span>99.97%</span></div>
+                            <div><strong>Delivery Rate</strong><span>96%</span></div>
+                            <div><strong>Refund Requests</strong><span>2</span></div>
+                            <div><strong>Average Rating</strong><span>4.8/5</span></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 FoodLion. All rights reserved.</p>
+        <p style="margin-top: 10px; font-size: 0.9rem;"><a href="privacy.html">Privacy Policy</a> | <a href="terms.html">Terms &amp; Conditions</a></p>
+    </footer>
+
+    <script src="JS/script.js"></script>
+</body>
+</html>
