@@ -1,0 +1,164 @@
+╯══════════════════════════════════════════════════════════════════════════════╮
+║                                                                            ║
+║                    🔧 FIXING "PAGE NOT FOUND" ERROR 🔧                    ║
+║                                                                            ║
+║              Follow these exact steps to get your site working             ║
+║                                                                            ║
+╰══════════════════════════════════════════════════════════════════════════════╯
+
+
+──────────────────────────────────────────────────────────────────────────────
+ STEP 1: OPEN COMMAND PROMPT
+──────────────────────────────────────────────────────────────────────────────
+
+Click Windows Start menu
+Search for: cmd
+Click: Command Prompt
+
+You should see a black window with blinking cursor
+
+
+──────────────────────────────────────────────────────────────────────────────
+ STEP 2: NAVIGATE TO BACKEND FOLDER
+──────────────────────────────────────────────────────────────────────────────
+
+Type this exactly and press ENTER:
+
+  cd e:\FoodLion\backend
+
+You should see:
+  e:\FoodLion\backend>
+
+
+──────────────────────────────────────────────────────────────────────────────
+ STEP 3: ACTIVATE VIRTUAL ENVIRONMENT
+──────────────────────────────────────────────────────────────────────────────
+
+Type this exactly and press ENTER:
+
+  venv\Scripts\activate
+
+You should see:
+  (venv) e:\FoodLion\backend>
+  
+  ← Notice (venv) at the beginning
+
+
+──────────────────────────────────────────────────────────────────────────────
+ STEP 4: RUN COMPLETE SETUP ⭐ IMPORTANT!
+──────────────────────────────────────────────────────────────────────────────
+
+Type this exactly and press ENTER:
+
+  python complete_setup.py
+
+WAIT for the setup to complete. You should see:
+
+  🔄 Step 1: Running migrations...
+     ✅ Migrations completed successfully
+  
+  🗯️ Step 2: Collecting static files...
+     ✅ Static files collected
+  
+  👤 Step 3: Setting up admin user...
+     ✅ Admin user created: ray@gmail.com
+  
+  🍔 Step 4: Setting up sample data...
+     ✅ Category: Biryani
+     ✅ Category: Cakes
+     ✅ Category: KFC
+     ✅ Category: Dominos
+     ✅ Restaurant: Karachi Biryani House
+     ✅ Restaurant: Sweet Dreams Bakery
+     ✅ Restaurant: KFC Pakistan
+     ✅ Restaurant: Dominos Pizza
+     ✅ Menu items: 12 created/verified
+  
+  ════════════════════════════════════════
+  ✅ SETUP COMPLETE!
+  ════════════════════════════════════════
+
+⭐ THIS IS CRITICAL! If you skip this step, you'll get 404 errors!
+
+
+──────────────────────────────────────────────────────────────────────────────
+ STEP 5: START THE SERVER
+──────────────────────────────────────────────────────────────────────────────
+
+Type this exactly and press ENTER:
+
+  python manage.py runserver
+
+You should see:
+
+  Django version 4.2.x, using settings 'foodlion.settings'
+  Starting development server at http://127.0.0.1:8000/
+  Quit the server with CONTROL-C
+
+✅ Server is now running!
+❌ Do NOT close this command prompt window!
+
+
+──────────────────────────────────────────────────────────────────────────────
+ STEP 6: OPEN BROWSER
+──────────────────────────────────────────────────────────────────────────────
+
+Open any web browser (Chrome, Firefox, Edge, Safari, etc.)
+
+In the address bar, type:
+
+  http://localhost:8000
+
+Press ENTER
+
+Wait 2-3 seconds for the page to load...
+
+✅ You should now see the FoodLion Dashboard!
+
+
+──────────────────────────────────────────────────────────────────────────────
+ 🎯 WHAT YOU SHOULD SEE
+──────────────────────────────────────────────────────────────────────────────
+
+✅ Dashboard Portal page loads
+✅ 7 colorful panels displayed
+✅ "FoodLion" title visible
+✅ Navigation menu working
+✅ No error messages
+
+Then you can:
+  • Click Admin Dashboard to access admin panel
+  • Login with: ray@gmail.com / Ray123
+  • View all 7 panels
+  • Browse restaurants
+  • See menu items
+
+
+──────────────────────────────────────────────────────────────────────────────
+ ✅ COMMAND COPY-PASTE
+──────────────────────────────────────────────────────────────────────────────
+
+Copy-paste this ENTIRE block into command prompt and press ENTER:
+
+cd e:\FoodLion\backend && venv\Scripts\activate && python complete_setup.py && python manage.py runserver
+
+Then open browser to:
+http://localhost:8000
+
+
+──────────────────────────────────────────────────────────────────────────────
+ 🎉 SUCCESS!
+──────────────────────────────────────────────────────────────────────────────
+
+Once http://localhost:8000 loads:
+
+✅ You can access all panels
+✅ Admin dashboard works
+✅ Login with: ray@gmail.com / Ray123
+✅ See 4 restaurants
+✅ View 12 menu items
+✅ Full system is ready!
+
+Next: Try accessing the admin dashboard and logging in!
+
+╔══════════════════════════════════════════════════════════════════════════════╮

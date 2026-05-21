@@ -1,0 +1,147 @@
+🔧 TROUBLESHOOTING: Page Not Found (404 Error)
+
+──────────────────────────────────────────────────────────────────────────────
+
+✅ STEP-BY-STEP FIX
+
+1. MAKE SURE YOU'RE IN THE BACKEND FOLDER
+   
+   Open Command Prompt and type:
+   cd e:\FoodLion\backend
+   
+   Press Enter
+
+2. ACTIVATE VIRTUAL ENVIRONMENT
+   
+   Type this and press Enter:
+   venv\Scripts\activate
+   
+   You should see (venv) before your command line
+
+3. RUN COMPLETE SETUP (THIS IS IMPORTANT!)
+   
+   Type this and press Enter:
+   python complete_setup.py
+   
+   Wait for it to complete. You should see:
+   ✅ Migrations completed successfully
+   ✅ Static files collected
+   ✅ Admin user created
+   ✅ Menu items: 12 created/verified
+   ✅ SETUP COMPLETE!
+
+4. START SERVER
+   
+   Type this and press Enter:
+   python manage.py runserver
+
+5. OPEN BROWSER
+   
+   Paste this in your browser:
+   http://localhost:8000
+   
+   You should now see the dashboard!
+
+──────────────────────────────────────────────────────────────────────────────
+
+❌ IF YOU STILL GET 404 ERROR
+
+Try this:
+
+1. Stop the server (press Ctrl+C)
+
+2. Run migrations manually:
+   python manage.py migrate
+
+3. Collect static files:
+   python manage.py collectstatic --noinput
+
+4. Start server again:
+   python manage.py runserver
+
+5. Try http://localhost:8000 again
+
+──────────────────────────────────────────────────────────────────────────────
+
+❓ COMMON ISSUES
+
+✗ "ModuleNotFoundError"
+  → Activate virtual environment first: venv\Scripts\activate
+
+✗ "Port 8000 already in use"
+  → Use a different port: python manage.py runserver 8001
+
+✗ "Database doesn't exist"
+  → Run: python complete_setup.py
+
+✗ "Static files not loading"
+  → Run: python manage.py collectstatic --noinput
+
+✗ "Admin login fails"
+  → Admin user might not be created
+  → Run: python complete_setup.py again
+
+──────────────────────────────────────────────────────────────────────────────
+
+📋 QUICK CHECKLIST
+
+Before accessing http://localhost:8000, verify:
+
+✓ Command prompt opened in: e:\FoodLion\backend
+✓ Virtual environment activated: (venv) visible in prompt
+✓ Setup script run: python complete_setup.py (completed successfully)
+✓ Server started: python manage.py runserver (shows "Quit the server with CONTROL-C")
+✓ Browser open: http://localhost:8000 entered in address bar
+✓ Wait: Give server 2-3 seconds to respond
+
+──────────────────────────────────────────────────────────────────────────────
+
+✅ WHAT YOU SHOULD SEE
+
+When you run the setup:
+  ✅ Running migrations...
+     ✅ Migrations completed successfully
+  
+  🗯️ Collecting static files...
+     ✅ Static files collected
+  
+  👤 Setting up admin user...
+     ✅ Admin user created: ray@gmail.com
+  
+  🍔 Setting up sample data...
+     ✅ Category: Biryani
+     ✅ Category: Cakes
+     ✅ Category: KFC
+     ✅ Category: Dominos
+     ✅ Restaurant: Karachi Biryani House
+     ✅ Restaurant: Sweet Dreams Bakery
+     ✅ Restaurant: KFC Pakistan
+     ✅ Restaurant: Dominos Pizza
+     ✅ Menu items: 12 created/verified
+  
+  ✅ SETUP COMPLETE!
+
+When server starts:
+  Django version 4.2.x, using settings 'foodlion.settings'
+  Starting development server at http://127.0.0.1:8000/
+  Quit the server with CONTROL-C
+
+──────────────────────────────────────────────────────────────────────────────
+
+🎯 NEXT: Once server is running...
+
+1. Open browser to: http://localhost:8000
+2. You should see: Dashboard Portal with all 7 panels
+3. To access admin: http://localhost:8000/admin-dashboard.html
+4. Login with:
+   Email: ray@gmail.com
+   Password: Ray123
+
+──────────────────────────────────────────────────────────────────────────────
+
+Still having issues? Check:
+- START_HERE.txt (Quick reference)
+- INTEGRATION_GUIDE.md (Detailed guide)
+- ../COMPLETE_INTEGRATION.md (Full documentation)
+
+──────────────────────────────────────────────────────────────────────────────
